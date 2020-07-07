@@ -7,9 +7,27 @@ namespace ChallengesWithTestsMark8
     {
         public bool CharacterIsALetter(char c)
         {
-            throw new NotImplementedException();
-        }
+            string lowercaseAlphabet = "abcdefghijklmnopqrstuvwxyz";
 
+            // Check all letters
+            foreach (char letter in lowercaseAlphabet)
+            {
+                if (c == letter) ||
+                     c == char.ToUpper(letter);
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+            return true;
+
+                
+
+        }
         public bool CountOfElementsIsEven(string[] vals)
         {
             throw new NotImplementedException();
