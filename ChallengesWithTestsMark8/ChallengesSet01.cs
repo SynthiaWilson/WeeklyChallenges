@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace ChallengesWithTestsMark8
 {
@@ -8,7 +9,7 @@ namespace ChallengesWithTestsMark8
         {
             if (num1 == num2)
             { return true; }
-            else { return false; }     
+            else { return false; }
         }
 
         public double Subtract(double minuend, double subtrahend)
@@ -24,6 +25,7 @@ namespace ChallengesWithTestsMark8
 
         public int GetSmallestNumber(int number1, int number2)
         {
+
             if (number1 > number2)
             {
                 return number2;
@@ -34,6 +36,8 @@ namespace ChallengesWithTestsMark8
             }
         }
 
+        
+
         public long Multiply(long factor1, long factor2)
         {
             return factor1 * factor2;
@@ -41,6 +45,7 @@ namespace ChallengesWithTestsMark8
 
         public string GetGreeting(string nameOfPerson)
         {
+            nameOfPerson.Trim();
             if (nameOfPerson != "")
             { 
          
