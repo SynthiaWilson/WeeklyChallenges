@@ -18,6 +18,7 @@ namespace ChallengesWithTestsMark8
 
         public bool IsSumOfOddsOdd(IEnumerable<int> numbers)
         {
+            //  Still missing the first test for some reason!!!!
             if (numbers == null) return false;
             if (numbers.Count() == 0) return false;
             int sum = 0;
@@ -30,29 +31,37 @@ namespace ChallengesWithTestsMark8
             return false;
         }
 
-        public bool PasswordContainsUpperLowerAndNumber(string password)
+        public bool PasswordContainsUpperLowerAndNumber(String password)
         {
-            throw new NotImplementedException();
+            if (password.Any(char.IsUpper) &&
+                password.Any(char.IsLower) &&
+                password.Any(char.IsDigit)) return true;
+            return false;
+            
         }
 
         public char GetFirstLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            var c =  val.ToCharArray();
+            return c[0];
         }
 
         public char GetLastLetterOfString(string val)
         {
-            throw new NotImplementedException();
+            var c = val.ToCharArray();
+            return c[val.Length - 1];
         }
 
         public decimal Divide(decimal dividend, decimal divisor)
         {
-            throw new NotImplementedException();
+            if (divisor == 0) return 0;
+            return dividend/ divisor;
         }
 
         public int LastMinusFirst(int[] nums)
         {
-            throw new NotImplementedException();
+            int last = nums.Length - 1;
+            return nums[last] - nums[0];
         }
 
         public int[] GetOddsBelow100()
